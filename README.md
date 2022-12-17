@@ -1,9 +1,7 @@
 # pred-analytics-paym-dflts
 Machine Learning: Predicting payment defaults (predictive analytics)
 
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
-
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -18,8 +16,17 @@ Machine Learning: Predicting payment defaults (predictive analytics)
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#about-the-project">About The Project</a></li>
+  <ol>    
+    <li>
+      <a href="##about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#workflow">Workflow</a></li>
+        <li><a href="#initial-data-preparation">Initial Data Preparation</a></li>        
+        <li><a href="#analysis-and-preprocessing">Analysis and Preprocessing</a></li>
+        <li><a href="#models-and-training">Models and Training</a></li>
+        <li><a href="#evaluation">Evaluation</a></li>
+      </ul>
+    </li>    
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
   </ol>
@@ -28,8 +35,6 @@ Machine Learning: Predicting payment defaults (predictive analytics)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 Sponsor:  Large communication, IT and entertainment company
 Year:     2019
@@ -40,6 +45,51 @@ Goals:
 - Build, train and compare different machine learning models
 - Compare best model to existing SAP HANA model (ROC-AUC score)
 - Create new features (feature engineering)
+
+### Workflow:
+![alt text](https://github.com/0LIFR1/pred-analytics-paym-dflts/blob/main/workflow.png)
+
+Supervised Learning and Binary Classification
+
+
+### Initial Data Preparation
+Main findings and tasks:
+
+
+### Analysis and Preprocessing
+Main findings and tasks:
+* Highly imbalanced dataset (only 1.14% belong to minority class / do not pay)
+* Data quality not ideal, lots of time spent on data analysis and data cleaning
+* Removing transaction duplicates
+* Deleting various features, also to avoid data leakage
+* Grouping and Binning (e.g. languages -> DE, FR, EN, IT and OTHER)
+* Feature engineering
+* Various aggregations (mean, sum, max, min values)
+* Various One-Hot or Binary encodings
+* Joining Demographis, Data and Merchants files into one training and test data set
+
+### Models and Training
+Main findings and tasks:
+* Training various models / classifiers:
+  * Random Forest Classifier
+  * Decision Tree Classifier
+  * Logistic Regression
+  * K-Nearest Neighbors
+  * AdaBoost
+* High score but poor prediction of minority class
+* Imbalanced class distribution requires re-sampling
+* Class weight, down sampling of majority class and Synthetic Minority Over-sampling Technique (SMOTE) tested
+* Better prediction of minority class prioritized -> avoid reputation damage (false positive cases) 
+* Final model: Logistic Regression combined with SMOTE
+* Hyperparameter tuning using GridSearchCV
+
+### Evaluation
+Main findings and tasks:
+* Confusion Matrix
+* Precision 0.83, Recall 0.61, F1 Score 0.7
+* Model predicts in 83% of all cases class 1 correctly and 61% of the class 1 cases
+* ROC-AUC score 0.88 (SAP HANA 0.85)
+* Might not be best evaluation metric for this case (Precision and Recall might be more meaningful)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -61,16 +111,19 @@ Goals:
 
 <!-- ROADMAP -->
 ## Roadmap
+There is still room for improvement :-), some ideas:
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+* Further data analysis, esp. correlation
+* Additional Feature Engineering, e.g.: Transactions weekday and time of day (morning, afternoon, etc.)
+* Customer location (evaluate x/y coordinates)
+* Merchant industrial sector (e.g. public transport)
+* PCA
+* Cross Validation
+* Test more re-sampling methods
+* Embedding vs. One-Hot encoding for high cardinality features
+* Try unsupervised learning (not sure if result would be better but worth a try)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
