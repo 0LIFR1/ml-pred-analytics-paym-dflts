@@ -55,11 +55,21 @@ Supervised Learning and Binary Classification
 
 
 ### Data
+Relevant data is exported from the company's datawarehouse in three files
+
+| File | No. of attr. | No. of rec |
+| --------------- | --------------- | --------------- |
+| Data (transactions) | 4 | > 28 mio |
+| Demographics (customer information) | 62 | > 500 k |
+| Merchants (merchants information) | 3 | 595 |
+
+
 
 
 ### Initial Data Preparation
 Main findings and tasks:
-
+* Initial preparation in RStudio (headers, regex)
+* Export as csv files for further processing
 
 ### Analysis and Preprocessing
 Main findings and tasks:
@@ -103,7 +113,7 @@ Main findings and tasks:
 ## Built With
 
 [![Python][python-shield]][python-url] [![RStudio][rstudio-shield]][rstudio-url] [![Jupyter][jupyter-shield]][jupyter-url]\
-[![Scikit-learn][scikit-learn-shield]][scikit-learn-url]
+[![Scikit-learn][scikit-learn-shield]][scikit-learn-url] [![Pandas][pandas-shield]][pandas-url] [![Numpy][numpy-shield]][numpy-url] [![Matplotlib][matplotlib-shield]][matplotlib-url]
 
 <!-- Logo examples
 <div>
@@ -155,3 +165,9 @@ There is still room for improvement :-), some ideas:
 [python-url]: https://www.python.org/
 [scikit-learn-shield]: https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white
 [scikit-learn-url]: https://scikit-learn.org/stable/
+[pandas-shield]: https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white
+[pandas-url]: https://pandas.pydata.org/docs/index.html
+[numpy-shield]: https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white
+[numpy-url]: https://numpy.org/
+[matplotlib-shield]: https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black
+[matplotlib-url]: https://matplotlib.org/
