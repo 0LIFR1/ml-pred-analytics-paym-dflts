@@ -38,32 +38,32 @@ Machine Learning: Predicting payment defaults (predictive analytics)
 ## About The Project
 
 Sponsor / client: Large communication, IT and entertainment company\
-Year: 2019\
 Staus: Test
 
-Sometimes customers make purchases the they cannot or do not want to pay for. This leads to a direct loss of money for the the company (project sponsor). In order to minimize such bad debts, a machine learning model was implemented in SAP HANA. This model predicts the likelihood of bad debts based on customer demographics and transactions made. Based on the the result, measures may be taken (e.g. lowder purchase limit).
+Summary:\
+Sometimes customers make purchases the they cannot or do not want to pay for. This leads to a direct loss of money for the the company (project sponsor). In order to minimize such bad debts, a machine learning model was implemented in SAP HANA. This model predicts the likelihood of bad debts based on customer demographics and transactions made. Based on the the result, measures may be taken (e.g. lower purchase limit).
 
 Goals:
 - Build, train and compare different machine learning models
 - Compare best model to existing SAP HANA model (ROC-AUC score)
 - Create new features (feature engineering)
 
+Machine learning algorithm:
+- Binary classification / supervised learning
+
 ### Workflow
 ![alt text](https://github.com/0LIFR1/pred-analytics-paym-dflts/blob/main/workflow.png)
 
-Supervised Learning and Binary Classification
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Data
-Relevant data is exported from the company's datawarehouse in three files
+Relevant data is exported from the company's datawarehouse into three files
 
 | File | No. of attr. | No. of rec |
 | --------------- | --------------- | --------------- |
 | Data (transactions) | 4 | > 28 mio |
 | Demographics (customer information) | 62 | > 500 k |
 | Merchants (merchants information) | 3 | 595 |
-
-
 
 
 ### Initial Data Preparation
@@ -81,7 +81,7 @@ Main findings and tasks:
 * Feature engineering
 * Various aggregations (mean, sum, max, min values)
 * Various One-Hot or Binary encodings
-* Joining Demographis, Data and Merchants files into one training and test data set
+* Joining demographis, data and merchants files into one training and test data set
 
 ### Models and Training
 Main findings and tasks:
@@ -100,11 +100,10 @@ Main findings and tasks:
 
 ### Evaluation
 Main findings and tasks:
-* Confusion Matrix
+* Logistic regression seems to perform best
 * Precision 0.83, Recall 0.61, F1 Score 0.7
-* Model predicts in 83% of all cases class 1 correctly and 61% of the class 1 cases
 * ROC-AUC score 0.88 (SAP HANA 0.85)
-* Might not be best evaluation metric for this case (Precision and Recall might be more meaningful)
+* ROC-AUC Might not be best evaluation metric for this case (precision and recall might be more meaningful)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
