@@ -36,10 +36,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Sponsor / client: Large communication, IT and entertainment company\
+Sponsor / client: Large communication, IT and entertainment company<br>
 Staus: Test
 
-#### Summary:
+**Summary**:<br>
 Sometimes customers make purchases the they cannot or do not want to pay for. This leads to a direct loss of money for the the company (project sponsor). In order to minimize such bad debts, a machine learning model was implemented in SAP HANA. This model predicts the likelihood of bad debts based on customer demographics and transactions made. Based on the the result, measures may be taken (e.g. lower purchase limit).
 
 Goals:
