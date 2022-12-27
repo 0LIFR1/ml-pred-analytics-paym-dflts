@@ -39,7 +39,7 @@
 Sponsor / client: Large communication, IT and entertainment company\
 Staus: Test
 
-Summary:\
+#### Summary:
 Sometimes customers make purchases the they cannot or do not want to pay for. This leads to a direct loss of money for the the company (project sponsor). In order to minimize such bad debts, a machine learning model was implemented in SAP HANA. This model predicts the likelihood of bad debts based on customer demographics and transactions made. Based on the the result, measures may be taken (e.g. lower purchase limit).
 
 Goals:
@@ -51,6 +51,7 @@ Machine learning algorithm:
 - Binary classification / supervised learning
 
 ### Workflow
+End-to-end project workflow:
 ![alt text](https://github.com/0LIFR1/pred-analytics-paym-dflts/blob/main/workflow.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -72,7 +73,7 @@ Main findings and tasks:
 
 ### Analysis and Preprocessing
 Main findings and tasks:
-* Highly imbalanced dataset (only 1.14% belong to minority class / do not pay)
+* Highly imbalanced dataset (only 1.14% belong to minority class)
 * Data quality not ideal, lots of time spent on data analysis and data cleaning
 * Removing transaction duplicates
 * Deleting various features, also to avoid data leakage
