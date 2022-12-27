@@ -1,5 +1,4 @@
-# pred-analytics-paym-dflts
-Machine Learning: Predicting payment defaults (predictive analytics)
+# Predicting payment defaults (machine learning)
 
 <a name="readme-top"></a>
 
