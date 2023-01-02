@@ -29,6 +29,7 @@
     </li>    
     <li><a href="#built-with">Built With</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#source-code">Source Code</a></li>
   </ol>
 </details>
 
@@ -140,6 +141,12 @@ There is still room for improvement :-), some ideas:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+<!-- SOURCE CODE -->
+## Source Code
+Unfortunately the source code cannot be shared as it is proprietary software (no public license).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
