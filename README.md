@@ -144,7 +144,7 @@ There is still room for improvement :-), some ideas:
 
 <!-- SOURCE CODE -->
 ## Source Code
-Unfortunately the source code cannot be shared as it is proprietary software (no public license).
+Code and output had to be partly anonymized and can be shared as pdf export only.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
